@@ -11,5 +11,5 @@
 
     mail($destinatario, $asunto, $mensajeCompleto, $header);
     echo "<script>alert('Correo enviado exitosamente')</script>";
-    echo "<script>setTimeout(\"location.href=Helloworld.html'\",1000)</script>";
+    echo "<script>setTimeout(\"location.href=contacto1.html'\",1000)</script>";
 ?>
