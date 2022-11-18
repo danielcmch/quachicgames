@@ -8,7 +8,7 @@
     <title>Quachic Games</title>
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/juegos.css">
+    <link rel="stylesheet" href="./css/contacto.css">
     <meta name="theme-color" content="#2091F9">
     <meta name="title" content="Quachic Games">
 </head>
@@ -19,7 +19,7 @@
         <nav class="nav container">
 
             <div>
-                <a href="#">
+                <a href="index.html">
                     <img src="images/logo.png" alt="Logo" class="nav__title" width="220px">
                 </a>
             </div>
@@ -35,7 +35,7 @@
                     <a href="acerca.html" class="nav__links1">ACERCA DE</a>
                 </li>
                 <li class="nav__items">
-                    <a href="contacto1.html" class="nav__links1">CONTACTO</a>
+                    <a href="contacto.html" class="nav__links1">CONTACTO</a>
                 </li>
 
                 <img src="./images/close.svg" alt="" class="nav__close">
@@ -48,41 +48,57 @@
 
         <section class="hero__container container">
             <p class="hero__title">
-                <FONT COLOR="black"><b><strong>CONTACTO</strong></b></FONT>
+                <FONT COLOR="white"><b><strong>CONTACTO</strong></b></FONT>
             </p>
         </section>
     </header>
 
     <main>
         <section class="container about">
-            <div class="container1">
-                <p>Actualmente contamos con dos secciones de juegos: Pruebas Pilotos y Oficiales.</p>
-                <div class="card">
-                    <img src="images/num1.jpg">
-                    <br><br>
-                    <h3>Pruebas Pilotos</h3>
+            <div class="grid1">
+                <div class="detalles">
+                    <h1>¿TIENES UNA PREGUNTA?</h1>
+                    <p>No dudes en escribirnos. Completa el formulario o envíanos un correo electrónico a la dirección
+                        mostrada a continuación.</p>
                     <br>
-                    <p>Somos expertos en la industria y trabajamos con motores comerciales, así como también
-                        desarrollamos soluciones personalizadas. Por encima de todo, nos enorgullecemos de ser
-                        ingeniosos y encontrar soluciones creativas a problemas complejos durante el ciclo de
-                        desarrollo.</p>
-                       
-                        <a href="pilotos.html">Ir ahora</a>
+                    <p><img src="images/mail.svg" /> joal@joal.net</p>
+                    <br>
+                    <p><img src="images/ubicacion.svg" />Torre Corporativa Midtown
+                        Av. Lopez Mateos Sur 2405, Piso 24 Oficina 129, Col. Italia Providencia C.P. 44648, Zapopan,
+                        Jalisco, MX.</p>
+                    <br>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.3893428534657!2d-103.37792138468969!3d20.694408604483193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae3963db96f9%3A0x6a8a32354de5d651!2sAv%20Adolfo%20L%C3%B3pez%20Mateos%20Nte%202405-Piso%2024%20Oficina%20129%2C%20Italia%20Providencia%2C%2044648%20Guadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1668046504663!5m2!1ses-419!2smx"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                <form action="https://formspree.io/f/xeqdvdpn" method="POST" id="formul">
+                    <div class="form">
 
-                <div class="card">
-                    <img src="images/num2.jpg">
-                    <br><br>
-                    <h3>Juegos Oficiales</h3>
-                    <br>
-                    <p>Dirigido por nuestro equipo de desarrolladores experimentados y profesionales de negocios.
-                        Combinar esa pasión con una filosofía de propiedad del proyecto y fomentar un entorno de
-                        innovación y creatividad crea un lugar de trabajo en el que todos prosperamos.</p>
-                        <br>
-                        <!--<a href="#">Ir ahora</a>-->
+                        <div class="grupo">
+                            <input type="text" name="name" id="" required><span class="barra"></span>
+                            <label>Nombre*</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="email" name="email" id="" required><span class="barra"></span>
+                            <label>Email*</label>
+                        </div>
+                        <div class="grupo">
+                            <textarea name="message" id="" rows="3" required></textarea><span class="barra"></span>
+                            <label>Mensaje*</label>
+                        </div>
                         
-                </div>
-
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+                <!--<script>
+                    document.addEventListener('DOMContentLoaded', function(){
+                      let formulario = document.getElementById('formul');
+                      formulario.addEventListener('submit', function() {
+                        formulario.reset();
+                      });
+                    });
+                  </script>-->
             </div>
         </section>
         <footer class="footer">

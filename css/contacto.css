@@ -91,7 +91,6 @@
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: 0.2s;
-
 }
 
 .nav__links:hover {
@@ -161,58 +160,191 @@
     background-color: rgba(71, 71, 71, 0.692)
 }
 
-/* CARDS */
-
-.container1 {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    overflow-y: hidden;
-    margin-top: -60px;
-    margin-bottom: -40px;
+/*Formulario*/
+:root{
+    --colorTextos: #49454567;
 }
 
-.container1 p{
-    font-size: large;
-    
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container1 .card {
-    width: 520px;
-    height: 585px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 35px;
+h1{
     text-align: center;
-    transition: all 0.25s;
+    margin: 10px 0;
+    font-weight: 800;
 }
 
-.container1 .card:hover {
-    transform: translate(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+.grid1{
+    margin-top: -30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
-.container1 .card img {
-    width: 520px;
-    height: 300px;
+.mapa{
+    width: auto;
+    grid-column: 1/3;
+    grid-row:3; 
 }
 
-.container1 .card p {
-    letter-spacing: 0.03em;
-    line-height: 1.6;
-    padding: 0 1rem;
-    font-size: 15px;
-    
+.detalles{
+    width: auto;
+    grid-column: 1;
+    grid-row:1/3;
 }
 
-.container1 .card a {
-    text-decoration: none;
-    color:#FFC616;
+.detalles h1{
+    text-align: left;
+}
+
+.detalles p{
+    text-align: justify;
+    line-height : 25px;
+}
+
+.detalles img{
+    align-items: left;
+    text-align: left;
+    justify-content: left;
+}
+
+form{
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    margin-top: 27px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 35px;
+}
+
+input, textarea{
+    background-color:#d3d3d36c;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #000000;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #000000;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: #FFC616;
+    transition: 0.3s ease all;
+    left: 0%;
+}
+button{
+    background-color: #FFC616;
+    display: block;
+    width: 130px;
+    height: 60px;
+    border:none;
+    color:rgb(0, 0, 0); 
     font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgba(71, 71, 71, 0.692)
+}
+
+
+@media screen and (max-width:600px){
+    .grid1{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 45px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    
+    form{
+        justify-content: center;
+        width: 60%;
+        grid-column: 1/5;
+        grid-row: 3;
+        margin-top: -40px;
+        margin-left: 25px;
+    }
+
+    
+    .detalles{
+        width: auto;
+        grid-column: 1/5;
+        grid-row:1/3;
+        margin-top: -45px;
+    }
+}
+
+@media screen and (max-width:450px){
+    form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:300px){
+    form{
+        width: 90%;
+    }
 }
 
 /* Footer */
@@ -326,9 +458,6 @@
         transition: .7s opacity;
     }
 
-    .container1 .card {
-        height: 680px;
-    }
 
     .nav__link--show {
         --show: block;

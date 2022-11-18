@@ -5,9 +5,7 @@
     font-family: 'Barlow';
 }
 
-body{
-    transition: 3s;
-}
+
 
 :root {
     --padding-container: 100px 0;
@@ -184,7 +182,7 @@ body{
 
 .container1 .card {
     width: 330px;
-    height: 535px;
+    height: 545px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -262,7 +260,7 @@ body{
 /* Knowledge */
 
 .knowledge {
-    background-color: #7a7a7ab6;
+    background-color: #7a7a7a1f;
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
@@ -291,7 +289,7 @@ body{
     display: block;
     padding:8px 8px 20px 8px;
     background-color: #ffffff;
-    border: 1px solid #999999;
+    border: 1px solid #99999900;
     border-radius: 8px;
 }
 
@@ -336,6 +334,13 @@ body{
     height: 100%;
     text-align: center;
 }
+
+.nav--footer p{
+    font-size: 12px;
+}
+
+
+
 
 .nav__link--footer {
     display: flex;
@@ -471,6 +476,22 @@ body{
         margin: 0;
     }
 
+}
+
+@media (max-width:424px){
+    .container1 .card {
+        width: 330px;
+        height: 545px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 35px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+    .container1 .card p{
+        font-size: 12.5px;
+    }
 }
 
 
