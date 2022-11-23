@@ -1,0 +1,15 @@
+  
+
+FONTS
+
+  https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap
+
+
+ICONS
+
+  https://boxicons.com/
+
+
+IMAGES
+
+  https://www.pexels.com/es-es/
